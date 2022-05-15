@@ -8,6 +8,7 @@ export const App = () => {
   const [formErrors, setFormErrors] = useState({ name: '', age: '', email: '', phone: '' });
   const [finalFormValue, setFinalFormValue] = useState();
 
+  // validate fields when submit
   const validateFormOnSubmit = () => {
     const { name, age, email, phone } = formValues;
     const currentError = {}
@@ -52,6 +53,7 @@ export const App = () => {
     return isValid;
   }
 
+  // validate the field on form filling time
   const handleOnInputChange = (event, key) => {
     const fieldValue = event.target.value;
     let errorMessage;
